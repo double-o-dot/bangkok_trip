@@ -7,63 +7,82 @@ export const ITINERARY_DATA: DaySchedule[] = [
     date: "1/22",
     label: "THU",
     items: [
-      { time: "07:10", title: "인천 출발", detail: "아시아나 OZ743 (제1터미널)", type: "transport" },
+      { time: "03:00", title: "출발", detail: "인천공항으로 이동", type: "transport" },
+      { time: "04:00", title: "공항 도착", detail: "인천공항 제1터미널", type: "transport" },
+      { time: "05:00", title: "유모차 gate to gate 신청", detail: "공항 서비스 신청", type: "logistics" },
+      { time: "06:00", title: "롯데면세점 구매물품 찾기", detail: "면세점 픽업", type: "activity" },
+      { time: "07:10", title: "탑승", detail: "아시아나 OZ743 (제1터미널)", type: "transport" },
       { time: "11:55", title: "방콕 수완나품 도착", detail: "입국 수속 및 짐 찾기", type: "transport" },
-      { time: "13:00", title: "호텔 이동", detail: "아바니 스쿰빗 체크인", type: "logistics" },
-      { time: "PM", title: "자유 일정", detail: "휴식 및 온눗역 주변 탐방", type: "leisure" }
+      { time: "13:00", title: "숙소 도착", detail: "아바니 스쿰빗 체크인", type: "logistics" },
+      { time: "17:00", title: "숙소 주변 탐방", detail: "셋이 함께 주변 돌아다니기", type: "leisure" },
+      { time: "19:00", title: "저녁 식사", detail: "17:00 식사", type: "food" },
+      { time: "20:00", title: "알투웨어 행사", detail: "3시간 정도, 다인이랑 아빠랑 시간 보내기", type: "activity" },
+      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
     ]
   },
   {
     date: "1/23",
     label: "FRI",
     items: [
-      { time: "08:00", title: "조식", detail: "호텔 조식", type: "food" },
-      { time: "11:00", title: "체크아웃 & 이동", detail: "킴튼 말라이로 이동 (짐 보관)", type: "logistics" },
-      { time: "12:00", title: "점심 식사", detail: "임숙 (예정)", type: "food" },
+      { time: "09:00", title: "기상", detail: "7:00 기상", type: "leisure" },
+      { time: "10:00", title: "조식", detail: "8:00 아침 식사", type: "food" },
+      { time: "11:00", title: "체크아웃 & 수영", detail: "책임님 룸으로 짐 옮겨놓고 체크아웃 후 수영", type: "logistics" },
+      { time: "13:00", title: "점심 식사", detail: "11:00 임숙", type: "food" },
       { time: "14:00", title: "마트 장보기", detail: "간식 및 필수품 구매", type: "activity" },
-      { time: "PM", title: "호텔 수영", detail: "킴튼 말라이 수영장 즐기기", type: "leisure" },
-      { time: "Dinner", title: "저녁 식사", detail: "배달 또는 룸서비스", type: "food" }
+      { time: "15:00", title: "킴튼 체크인", detail: "킴튼 말라이 체크인 (15:00)", type: "logistics" },
+      { time: "17:00", title: "숙소 주변 탐방", detail: "주변 돌아다니기", type: "leisure" },
+      { time: "19:00", title: "저녁 식사", detail: "17:00 롱씨포차나", type: "food" },
+      { time: "20:00", title: "룸피니 공원", detail: "노을 감상 및 자기 전 수영", type: "leisure" },
+      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
     ]
   },
   {
     date: "1/24",
     label: "SAT",
     items: [
-      { time: "08:00", title: "조식", detail: "호텔 조식", type: "food" },
-      { time: "AM", title: "오전 수영", detail: "여유로운 오전 시간", type: "leisure" },
+      { time: "09:00", title: "기상", detail: "7:00 기상", type: "leisure" },
+      { time: "10:00", title: "조식", detail: "8:00 아침 식사", type: "food" },
       { time: "11:00", title: "점심 식사", detail: "노스이스트 (Northeast)", type: "food" },
-      { time: "13:00", title: "마사지", detail: "프리마 스파 (예정)", type: "relax" },
-      { time: "Dinner", title: "저녁 식사", detail: "Savelberg (파인다이닝)", type: "food" }
+      { time: "13:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
+      { time: "17:00", title: "Sanam Chai역 출발", detail: "역 출발", type: "transport" },
+      { time: "18:00", title: "왓포, 왓아룬", detail: "숙소 주변 돌아다니기", type: "activity" },
+      { time: "19:00", title: "저녁 식사", detail: "17:00 반 타띠안", type: "food" },
+      { time: "20:00", title: "숙소 복귀", detail: "돌아와서 씻고 놀다 자자", type: "leisure" },
+      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
     ]
   },
   {
     date: "1/25",
     label: "SUN",
     items: [
-      { time: "08:00", title: "조식", detail: "호텔 조식", type: "food" },
-      { time: "10:00", title: "키즈 카페", detail: "하버랜드 (HarborLand)", type: "activity" },
-      { time: "12:00", title: "점심 식사", detail: "현지 식당", type: "food" },
-      { time: "PM", title: "오후 수영", detail: "물놀이", type: "leisure" },
-      { time: "Dinner", title: "저녁 식사", detail: "Bubble in the Forest", type: "food" }
+      { time: "09:00", title: "기상", detail: "7:00 기상", type: "leisure" },
+      { time: "10:00", title: "조식", detail: "8:00 아침 식사", type: "food" },
+      { time: "11:00", title: "두짓 센트럴파크", detail: "실내놀이터", type: "activity" },
+      { time: "13:00", title: "점심 식사", detail: "11:00 점심", type: "food" },
+      { time: "15:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
+      { time: "19:00", title: "저녁 식사", detail: "17:00 저녁", type: "food" },
+      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
     ]
   },
   {
     date: "1/26",
     label: "MON",
     items: [
-      { time: "08:00", title: "조식", detail: "호텔 조식", type: "food" },
-      { time: "11:00", title: "체크아웃", detail: "짐 보관", type: "logistics" },
-      { time: "12:00", title: "점심 식사", detail: "마지막 현지식", type: "food" },
-      { time: "PM", title: "마사지", detail: "출국 전 피로 풀기", type: "relax" },
-      { time: "Evening", title: "공항 이동", detail: "수완나품 공항으로 이동", type: "transport" }
+      { time: "09:00", title: "기상", detail: "7:00 기상", type: "leisure" },
+      { time: "10:00", title: "조식", detail: "8:00 아침 식사", type: "food" },
+      { time: "11:00", title: "점심 식사", detail: "11:00 점심", type: "food" },
+      { time: "13:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
+      { time: "18:00", title: "집합", detail: "16:00 집합", type: "logistics" },
+      { time: "20:00", title: "저녁 식사", detail: "18:00 저녁", type: "food" },
+      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
     ]
   },
   {
     date: "1/27",
     label: "TUE",
     items: [
-      { time: "01:00", title: "방콕 출발", detail: "아시아나 OZ742", type: "transport" },
-      { time: "08:00", title: "인천 도착", detail: "여행 종료", type: "transport" }
+      { time: "01:00", title: "탑승", detail: "방콕 출발 - 아시아나 OZ742 (11:00 탑승)", type: "transport" },
+      { time: "08:00", title: "서울 도착", detail: "인천공항 도착 - 여행 종료", type: "transport" }
     ]
   }
 ];
