@@ -3,6 +3,29 @@ import { Plane, Users, ArrowRight } from 'lucide-react';
 import { PARTICIPANTS } from '../constants';
 
 const Header: React.FC = () => {
+  // 여행 시작일: 2026년 1월 22일
+  const tripStartDate = new Date(2026, 0, 22); // 월은 0부터 시작 (0 = 1월)
+  const today = new Date();
+  
+  // 오늘 날짜를 자정으로 설정하여 정확한 일수 계산
+  const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const tripStart = new Date(tripStartDate.getFullYear(), tripStartDate.getMonth(), tripStartDate.getDate());
+  
+  // D-Day 계산 (밀리초를 일수로 변환)
+  const diffTime = tripStart.getTime() - todayStart.getTime();
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  // D-Day 텍스트 생성
+  const getDDayText = () => {
+    if (diffDays > 0) {
+      return `D-${diffDays}`;
+    } else if (diffDays === 0) {
+      return 'D-DAY';
+    } else {
+      return `D+${Math.abs(diffDays)}`;
+    }
+  };
+
   return (
     <header className="pt-10 pb-6 px-6">
       <div className="flex justify-between items-start mb-6">
@@ -45,7 +68,7 @@ const Header: React.FC = () => {
                 </span>
              </div>
              <div className="text-[10px] font-bold bg-black text-white px-2 py-1 rounded">
-                D-DAY TRIP
+                {getDDayText()} TRIP
              </div>
         </div>
       </div>
