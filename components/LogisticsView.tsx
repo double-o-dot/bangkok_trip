@@ -1,8 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FLIGHTS, HOTELS } from '../constants';
-import { PlaneTakeoff, MapPin, Calendar, CreditCard, ArrowRight } from 'lucide-react';
+import { PlaneTakeoff, MapPin, Calendar, CreditCard, ArrowRight, Lock } from 'lucide-react';
+
+const PASSWORD = '222';
 
 const LogisticsView: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === PASSWORD) {
+      setIsAuthenticated(true);
+      setError(false);
+    } else {
+      setError(true);
+      setPassword('');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="p-6 flex items-center justify-center min-h-[60vh]">
+        <div className="w-full max-w-md space-y-6">
+          <div className="text-center space-y-2">
+            <div className="flex justify-center">
+              <div className="bg-stone-100 rounded-full p-4">
+                <Lock size={32} className="text-stone-600" />
+              </div>
+            </div>
+            <h2 className="text-2xl font-bold uppercase tracking-tight">Protected Content</h2>
+            <p className="text-stone-500 text-sm">This section contains private information</p>
+          </div>
+          
+          <form onSubmit={handlePasswordSubmit} className="space-y-4">
+            <div>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setError(false);
+                }}
+                placeholder="Enter password"
+                className={`w-full px-4 py-3 border-2 rounded-lg font-mono text-center text-lg focus:outline-none focus:ring-2 focus:ring-black transition-all ${
+                  error ? 'border-red-500 bg-red-50' : 'border-stone-300 focus:border-black'
+                }`}
+                autoFocus
+              />
+              {error && (
+                <p className="mt-2 text-sm text-red-500 text-center">Incorrect password. Please try again.</p>
+              )}
+            </div>
+            <button
+              type="submit"
+              className="w-full bg-black text-white py-3 rounded-lg font-bold uppercase tracking-widest hover:bg-stone-800 transition-colors"
+            >
+              Unlock
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="p-6 space-y-8 animate-in fade-in duration-500">
       
