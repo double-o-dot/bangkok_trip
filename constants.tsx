@@ -70,11 +70,10 @@ export const ITINERARY_DATA: DaySchedule[] = [
     items: [
       { time: "09:00", title: "기상", detail: "7:00 기상", type: "leisure" },
       { time: "10:00", title: "조식", detail: "8:00 아침 식사", type: "food" },
-      { time: "11:00", title: "점심 식사", detail: "11:00 점심", type: "food" },
-      { time: "13:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
-      { time: "18:00", title: "집합", detail: "16:00 집합", type: "logistics" },
-      { time: "20:00", title: "저녁 식사", detail: "18:00 저녁", type: "food" },
-      { time: "22:00", title: "취침", detail: "20:00 취침", type: "leisure" }
+      { time: "13:00", title: "점심 식사", detail: "11:00 점심", type: "food" },
+      { time: "15:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
+      { time: "16:00", title: "집합", detail: "16:00 집합", type: "logistics" },
+      { time: "20:00", title: "저녁 식사", detail: "18:00 저녁", type: "food" }
     ]
   },
   {
