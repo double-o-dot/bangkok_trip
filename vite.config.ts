@@ -6,13 +6,14 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     // GitHub Pages 배포를 위한 base 경로 설정
     // 리포지토리 이름이 username.github.io가 아니면 base를 설정해야 함
+    // bangkok_trip 리포지토리의 경우 /bangkok_trip/로 설정
     const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
-    const base = repoName && !repoName.includes('.github.io')
+    const base = (repoName && !repoName.includes('.github.io'))
       ? `/${repoName}/`
-      : '/';
+      : (env.VITE_BASE_PATH || '/bangkok_trip/');
     
     return {
-      base: env.VITE_BASE_PATH || base,
+      base: base,
       server: {
         port: 3000,
         host: '0.0.0.0',
