@@ -73,14 +73,14 @@ export const ITINERARY_DATA: DaySchedule[] = [
       { time: "13:00", title: "점심 식사", detail: "11:00 점심", type: "food" },
       { time: "15:00", title: "낮잠", detail: "13:00 낮잠", type: "leisure" },
       { time: "16:00", title: "집합", detail: "16:00 집합", type: "logistics" },
-      { time: "20:00", title: "저녁 식사", detail: "18:00 저녁", type: "food" }
+      { time: "18:00", title: "저녁 식사", detail: "18:00 저녁", type: "food" }
     ]
   },
   {
     date: "1/27",
     label: "TUE",
     items: [
-      { time: "01:00", title: "탑승", detail: "방콕 출발 - 아시아나 OZ742 (11:00 탑승)", type: "transport" },
+      { time: "01:00", title: "탑승", detail: "방콕 출발 - 아시아나 OZ742", type: "transport" },
       { time: "08:00", title: "서울 도착", detail: "인천공항 도착 - 여행 종료", type: "transport" }
     ]
   }
